@@ -33,14 +33,28 @@ const jsuser = {
 
 
 jsuser.greeting = function(){
-    console.log("Hello JS user");
+    // console.log("Hello JS user");
 }
 jsuser.greetingtwo = function(){
-    console.log(`Hello JS user, ${this.name}`);
+    // console.log(`Hello JS user, ${this.name}`);
 }
-console.log(jsuser.greeting());
-console.log(jsuser.greetingtwo());
+// console.log(jsuser.greeting());
+// console.log(jsuser.greetingtwo());
 
 
-// we can access a value in two ways  one is dot -->console.log(jsuser.email)
-                                    //   second is square brackets -->console.log(jsuser[mySym])
+// we can access a value in two ways  one is dot -->console.log(jsuser.email) -->  second is square brackets -->console.log(jsuser[mySym])
+
+//--Destructuring in Objects 
+
+const course = {
+     courcename: "Javascript",
+     price: "999",
+     courseInstructor: "Ankush Kumar"
+    }
+            
+    const {courseInstructor} = course    // there is two to call destructuring in object this is first one
+    console.log(courseInstructor);
+
+    const {courseInstructor: Instructor} = course   // This is second one
+    console.log(Instructor);
+
