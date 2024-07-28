@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Chai Aur Code with Ankush</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+
+   <!-- add list element in Html  -->
+    
+<script>
+    function addLanguage(langNAme){
+      const li =  document.createElement('li')
+      li.innerHTML = `${langNAme}`                           // here we can traverse all the element
+      document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("Python")
+    addLanguage("typescript")
+
+
+    //  optimize approach
+
+    function addOptiLanguage(langName){
+         const li = document.createElement('li');
+         li.appendChild(document.createTextNode(langName))
+         document.querySelector('.language').appendChild(li)
+    }
+    addOptiLanguage('golang')
+
+
+    //-----------------Edit---------------------
+
+    // this is not a optimize solution  but we can use in project 
+
+//    const secondLang = document.querySelector("li:nth-child(2)")
+//    secondLang.innerHTML = 'Mojo'
+
+
+   //---Optimize Approach
+
+   const secondLang = document.querySelector("li:nth-child(2)")
+    const newli =  document.createElement('li')
+    newli.textContent = "Java"
+    secondLang.replaceWith(newli)   // Replacewith
+
+    //----------Edit------------------
+   const firstLang = document.querySelector("li:first-child")
+   firstLang.outerHTML= '<li> TypeScript</li>'   // outerHTML
+
+
+   //-----remove----------
+
+   const lastLang = document.querySelector('li:last-child')
+   lastLang.remove()
+
+</script>
+</html>
