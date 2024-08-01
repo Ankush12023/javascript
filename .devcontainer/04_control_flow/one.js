@@ -10,7 +10,7 @@ if(false){
 
 }
 //  <, >, <=, >=, ==, !=, === (value ke sath type bhi check karta h), !==
-// const temperature = 51
+// const temperature = 
 // if (temperature === 41) {
 //     console.log("temperature is less then 41");
 // }
@@ -59,4 +59,6 @@ if (userLoggedIn && DebitCard) {     // && and operator
 if (userLoggedInGoogle || userLoggedInEmail) {   // || or operator
     console.log("user Login");
 }
+
+
 
